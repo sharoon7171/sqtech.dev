@@ -8,8 +8,8 @@ const FooterBottom = () => {
   return (
     <motion.div 
       className="footer-bottom"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
       viewport={{ once: true }}
     >

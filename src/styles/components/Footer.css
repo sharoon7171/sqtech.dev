@@ -148,7 +148,7 @@
   line-height: 1;
 }
 
-/* Bottom bar */
+/* Bottom bar - Redesigned for better appearance */
 .footer-bottom {
   position: relative;
   z-index: 1;
@@ -156,14 +156,15 @@
   padding: var(--spacing-lg) 0;
   background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
   backdrop-filter: blur(10px);
+  margin-top: var(--spacing-lg);
 }
 
 .footer-bottom-content {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  gap: var(--spacing-md);
 }
 
 .footer-copyright p {
@@ -171,43 +172,60 @@
   color: var(--neutral-700);
   font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* Legal links */
+/* Legal links - Redesigned */
 .footer-legal {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .footer-legal-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
 }
 
 .footer-legal a {
-  color: var(--neutral-700);
+  color: var(--neutral-600);
   text-decoration: none;
   font-size: clamp(0.75rem, 2vw, 0.85rem);
   font-weight: 500;
   font-family: var(--font-primary);
   transition: all var(--transition-normal);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  position: relative;
 }
 
 .footer-legal a:hover {
   color: var(--primary-600);
+  background: var(--neutral-100);
+  transform: translateY(-1px);
 }
 
 .separator {
   color: var(--neutral-400);
   font-size: clamp(0.7rem, 2vw, 0.8rem);
+  margin: 0 var(--spacing-xs);
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+}
+
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
