@@ -1,4 +1,9 @@
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
+
 const Services = () => {
+  // Set dynamic page title
+  useDocumentTitle('Our Services');
+
   return (
     <div style={{ paddingTop: '100px', minHeight: '100vh', padding: '100px 20px 20px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
