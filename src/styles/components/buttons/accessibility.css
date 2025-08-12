@@ -1,0 +1,119 @@
+/* Button Accessibility */
+
+/* Focus States for Keyboard Navigation */
+.btn:focus-visible {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-focus), var(--shadow-hover);
+}
+
+.btn-outline:focus-visible {
+  outline-color: var(--primary-600);
+}
+
+.btn-secondary:focus-visible {
+  outline-color: var(--primary-600);
+}
+
+.btn-ghost:focus-visible {
+  outline-color: var(--primary-600);
+  background: var(--primary-50);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid;
+  }
+  
+  .btn-primary {
+    border-color: var(--primary-800);
+  }
+  
+  .btn-secondary {
+    border-color: var(--secondary-800);
+  }
+  
+  .btn-outline {
+    border-width: 3px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn::before,
+  .btn::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .btn:active {
+    transform: none;
+  }
+}
+
+/* Screen Reader Support */
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn[aria-pressed="true"] {
+  background: var(--primary-600);
+  color: white !important;
+}
+
+/* Loading State */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.5rem 0 0 -0.5rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Color blind friendly indicators */
+.btn-success::before {
+  content: '✓';
+  position: absolute;
+  left: 0.5rem;
+  opacity: 0.7;
+}
+
+.btn-error::before {
+  content: '⚠';
+  position: absolute;
+  left: 0.5rem;
+  opacity: 0.7;
+}
+
+.btn-warning::before {
+  content: '!';
+  position: absolute;
+  left: 0.5rem;
+  opacity: 0.7;
+}

@@ -1,0 +1,151 @@
+/* Typography System - Paragraphs & Body Text */
+
+/* Base Paragraph Styles */
+.text-base {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--neutral-700);
+  margin: 0;
+}
+
+/* Text Sizes */
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: 1.6;
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: 1.5;
+}
+
+/* Lead Text */
+.text-lead {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--neutral-600);
+}
+
+.text-lead-lg {
+  font-size: var(--font-size-xl);
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--neutral-600);
+}
+
+/* Body Text Variants */
+.text-body {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--neutral-700);
+}
+
+.text-body-sm {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--neutral-600);
+}
+
+.text-caption {
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+  color: var(--neutral-500);
+  font-weight: 500;
+}
+
+/* Text Colors */
+.text-primary { color: var(--primary-600); }
+.text-secondary { color: var(--secondary-600); }
+.text-accent { color: var(--accent-600); }
+.text-success { color: var(--success-600); }
+.text-warning { color: var(--warning-600); }
+.text-error { color: var(--error-600); }
+.text-white { color: white; }
+.text-black { color: var(--neutral-900); }
+.text-muted { color: var(--neutral-500); }
+.text-subtle { color: var(--neutral-400); }
+
+/* Text Weights */
+.text-light { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-medium { font-weight: 500; }
+.text-semibold { font-weight: 600; }
+.text-bold { font-weight: 700; }
+.text-extrabold { font-weight: 800; }
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Text Transform */
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+.text-normal-case { text-transform: none; }
+
+/* Text Decoration */
+.text-underline { text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.text-no-underline { text-decoration: none; }
+
+/* Text Spacing */
+.text-tight { letter-spacing: -0.025em; }
+.text-normal-spacing { letter-spacing: 0; }
+.text-wide { letter-spacing: 0.025em; }
+.text-wider { letter-spacing: 0.05em; }
+.text-widest { letter-spacing: 0.1em; }
+
+/* Text Truncation */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  .text-lead {
+    font-size: var(--font-size-base);
+  }
+  
+  .text-lead-lg {
+    font-size: var(--font-size-lg);
+  }
+}

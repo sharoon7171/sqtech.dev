@@ -1,0 +1,67 @@
+/* Desktop Menu Styles */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .navbar-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--neutral-700);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+    letter-spacing: 0.025em;
+  }
+  
+  .navbar-link:hover {
+    background: var(--primary-50);
+    color: var(--primary-700);
+  }
+  
+  .navbar-link.active {
+    background: var(--primary-100);
+    color: var(--primary-700);
+  }
+  
+  .navbar-link i {
+    font-size: 16px;
+    color: var(--primary-600);
+    transition: all var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  
+  /* CTA Button */
+  .navbar-cta {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-menu,
+    .navbar-cta {
+      display: none;
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .navbar-link {
+      transition: none;
+    }
+  }

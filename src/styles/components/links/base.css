@@ -1,0 +1,70 @@
+/* Base Link System - Core Styles & Active States */
+
+/* Base Link Variables */
+:root {
+  --link-transition: all var(--transition-normal);
+  --link-active-bg: var(--primary-100);
+  --link-active-color: var(--primary-700);
+  --link-hover-bg: var(--primary-50);
+  --link-hover-color: var(--primary-700);
+  --link-indicator-width: 3px;
+  --link-indicator-color: var(--primary-600);
+}
+
+/* Base Link Styles */
+.link-base {
+  position: relative;
+  text-decoration: none;
+  transition: var(--link-transition);
+  font-family: var(--font-heading);
+  letter-spacing: 0.025em;
+  border-radius: var(--radius-lg);
+}
+
+/* Active State Base */
+.link-base.active {
+  background: var(--link-active-bg);
+  color: var(--link-active-color);
+}
+
+/* Hover State Base */
+.link-base:hover {
+  background: var(--link-hover-bg);
+  color: var(--link-hover-color);
+}
+
+/* Active Indicator Base */
+.link-base.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--link-indicator-width);
+  height: 60%;
+  background: var(--link-indicator-color);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Icon Base Styles */
+.link-base i {
+  color: var(--primary-600);
+  transition: var(--link-transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Focus States */
+.link-base:focus-visible {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .link-base {
+    transition: none;
+  }
+}

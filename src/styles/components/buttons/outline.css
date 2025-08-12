@@ -1,0 +1,56 @@
+/* Outline Button Variants */
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-600);
+  border: 2px solid var(--primary-600);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary-600);
+  color: white !important;
+  border-color: var(--primary-600);
+  box-shadow: 0 8px 20px -5px rgba(59, 130, 246, 0.3);
+}
+
+.btn-outline:focus {
+  color: white !important;
+}
+
+/* Outline Button Variants */
+.btn-outline-light {
+  background: transparent;
+  color: var(--primary-500);
+  border: 2px solid var(--primary-300);
+}
+
+.btn-outline-light:hover {
+  background: var(--primary-500);
+  color: white !important;
+  border-color: var(--primary-500);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--secondary-800);
+  border: 2px solid var(--secondary-700);
+}
+
+.btn-outline-dark:hover {
+  background: var(--secondary-800);
+  color: white !important;
+  border-color: var(--secondary-800);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  backdrop-filter: blur(10px);
+}

@@ -1,0 +1,8 @@
+/* Typography System - Complete Type Scale */
+
+/* Import all typography components */
+@import './headings.css';    /* Display, H1-H6, heading variants */
+@import './paragraphs.css';  /* Body text, lead text, sizes */
+@import './lists.css';       /* Ordered, unordered, custom lists */
+@import './code.css';        /* Code blocks, inline code, syntax */
+@import './utilities.css';   /* Utilities, colors, spacing */

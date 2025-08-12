@@ -1,0 +1,44 @@
+/* Primary Button Variants */
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white !important;
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 12px 30px -5px rgba(59, 130, 246, 0.4), 0 10px 15px -8px rgba(59, 130, 246, 0.2);
+  color: white !important;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Primary Button Variants */
+.btn-primary-gradient {
+  background: var(--gradient-hero);
+  color: white !important;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.btn-primary-gradient:hover {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+  box-shadow: 0 15px 35px -5px rgba(59, 130, 246, 0.5), 0 12px 20px -8px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary-solid {
+  background: var(--primary-600);
+  color: white !important;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary-solid:hover {
+  background: var(--primary-700);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+}

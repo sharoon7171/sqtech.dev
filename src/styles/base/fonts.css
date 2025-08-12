@@ -1,0 +1,46 @@
+/* Google Fonts Imports - Professional Typography */
+
+/* Preconnect for performance optimization */
+@import url('https://fonts.googleapis.com');
+@import url('https://fonts.gstatic.com');
+
+/* Futuristic Logo Font */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Professional Website Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+/* Font Face Declarations for Better Control */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900');
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900');
+}
+
+/* Font Loading Optimization */
+.font-loading {
+  font-display: swap;
+  visibility: hidden;
+}
+
+.font-loaded {
+  visibility: visible;
+}

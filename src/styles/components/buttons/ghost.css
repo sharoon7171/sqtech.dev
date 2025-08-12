@@ -1,0 +1,48 @@
+/* Ghost Button Variants */
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-600);
+  box-shadow: none;
+  border: none;
+}
+
+.btn-ghost:hover {
+  background: var(--primary-50);
+  color: var(--primary-700);
+}
+
+/* Ghost Button Variants */
+.btn-ghost-light {
+  background: transparent;
+  color: var(--primary-500);
+  border: none;
+}
+
+.btn-ghost-light:hover {
+  background: var(--primary-25);
+  color: var(--primary-600);
+}
+
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--secondary-700);
+  border: none;
+}
+
+.btn-ghost-dark:hover {
+  background: var(--secondary-100);
+  color: var(--secondary-800);
+}
+
+.btn-ghost-white {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+.btn-ghost-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
+  backdrop-filter: blur(10px);
+}

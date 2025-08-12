@@ -1,0 +1,77 @@
+/* Text Links - Content & Inline Links */
+
+/* Standard Text Links */
+.text-link {
+  color: var(--primary-600);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid transparent;
+  font-weight: 500;
+}
+
+.text-link:hover {
+  color: var(--primary-700);
+  border-bottom-color: var(--primary-700);
+}
+
+.text-link:focus-visible {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Underlined Text Links */
+.text-link-underlined {
+  color: var(--primary-600);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-300);
+  text-underline-offset: 3px;
+  transition: all var(--transition-normal);
+}
+
+.text-link-underlined:hover {
+  color: var(--primary-700);
+  text-decoration-color: var(--primary-600);
+}
+
+/* Subtle Text Links */
+.text-link-subtle {
+  color: var(--neutral-600);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+.text-link-subtle:hover {
+  color: var(--primary-600);
+}
+
+/* Bold Text Links */
+.text-link-bold {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.text-link-bold:hover {
+  color: var(--primary-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Inline Code Links */
+.text-link-code {
+  color: var(--primary-600);
+  background: var(--primary-50);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.text-link-code:hover {
+  background: var(--primary-100);
+  color: var(--primary-700);
+}

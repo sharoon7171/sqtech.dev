@@ -1,0 +1,144 @@
+/* Base Button System - Core Styles & Animations */
+
+/* Animation Variables for Consistent Effects */
+:root {
+  --anim-duration-fast: 0.15s;
+  --anim-duration-normal: 0.3s;
+  --anim-duration-slow: 0.5s;
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --scale-hover: 1.05;
+  --scale-active: 0.98;
+  --translate-hover: -2px;
+  --translate-active: 1px;
+  --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-active: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Base Button Styles */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+  user-select: none;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: all var(--anim-duration-normal) var(--ease-out-quart);
+  will-change: transform, box-shadow, background-color;
+  contain: layout style paint;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Button Shimmer Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--anim-duration-normal) var(--ease-out-quart);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Ripple Effect */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--anim-duration-slow) var(--ease-out-expo),
+              height var(--anim-duration-slow) var(--ease-out-expo),
+              opacity var(--anim-duration-slow) var(--ease-out-expo);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+  transform: translateY(var(--translate-hover)) scale(var(--scale-hover));
+  box-shadow: var(--shadow-hover);
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: translateY(var(--translate-active)) scale(var(--scale-active));
+  box-shadow: var(--shadow-active);
+  transition-duration: var(--anim-duration-fast);
+}
+
+.btn:active::after {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  transition-duration: 0s;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus), var(--shadow-hover);
+  transform: scale(1.02);
+}
+
+/* Button States */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  pointer-events: none;
+}
+
+.btn:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Button Icons */
+.btn i {
+  font-size: 1em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+/* Icon positioning */
+.btn i:first-child {
+  margin-right: 0.5rem;
+}
+
+.btn i:last-child {
+  margin-left: 0.5rem;
+}

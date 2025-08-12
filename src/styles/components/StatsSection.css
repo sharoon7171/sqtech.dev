@@ -1,0 +1,128 @@
+/* Stats Section - Clean White Background */
+
+.stats-section {
+  padding: var(--spacing-lg) 0 var(--spacing-2xl);
+  background: #ffffff;
+  position: relative;
+}
+
+/* Section header styling - No separator */
+.stats-section .section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  max-width: var(--content-2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats-section .section-header h2 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-900);
+}
+
+.stats-section .section-header p {
+  color: var(--neutral-600);
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  max-width: clamp(280px, 85vw, 600px);
+  margin: 0 auto;
+}
+
+/* Stats grid layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 40vw, 300px), 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid responsive behavior */
+@media (min-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Ultra small width support */
+@media (max-width: 320px) {
+  .stats-section {
+    padding: var(--spacing-md) 0 var(--spacing-lg);
+  }
+  
+  .stats-section .section-header {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .stats-grid {
+    gap: var(--spacing-xs);
+  }
+}
+
+/* Clean minimal background pattern */
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Container override for this section */
+.stats-section .container {
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation stagger for grid items */
+.stats-grid > * {
+  animation-fill-mode: both;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .stats-grid > * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .stats-section {
+    background: white;
+    border: none;
+    padding: 2rem 0;
+  }
+  
+  .stats-section::before {
+    display: none;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    page-break-inside: avoid;
+  }
+}

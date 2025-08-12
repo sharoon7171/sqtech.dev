@@ -1,0 +1,48 @@
+/* Secondary Button Variants */
+
+.btn-secondary {
+  background: var(--neutral-50);
+  color: var(--neutral-900);
+  border: 1px solid var(--neutral-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-50);
+  border-color: var(--primary-500);
+  color: var(--primary-600);
+  box-shadow: 0 8px 20px -5px rgba(59, 130, 246, 0.2);
+}
+
+.btn-secondary:focus,
+.btn-secondary:active {
+  color: var(--primary-600);
+  text-decoration: none;
+}
+
+/* Secondary Button Variants */
+.btn-secondary-light {
+  background: var(--primary-50);
+  color: var(--primary-700);
+  border: 1px solid var(--primary-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary-light:hover {
+  background: var(--primary-100);
+  border-color: var(--primary-300);
+  color: var(--primary-800);
+}
+
+.btn-secondary-dark {
+  background: var(--secondary-800);
+  color: white !important;
+  border: 1px solid var(--secondary-700);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary-dark:hover {
+  background: var(--secondary-900);
+  border-color: var(--secondary-600);
+  box-shadow: 0 8px 20px -5px rgba(30, 41, 59, 0.3);
+}

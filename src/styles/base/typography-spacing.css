@@ -1,0 +1,90 @@
+/* Global Typography Spacing - Tighter, more readable */
+
+/* Reset default margins to 0 */
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, ul, ol, dl {
+  margin: 0;
+}
+
+/* Add consistent, tighter spacing between elements */
+h1 + p, h1 + ul, h1 + ol,
+h2 + p, h2 + ul, h2 + ol,
+h3 + p, h3 + ul, h3 + ol,
+h4 + p, h4 + ul, h4 + ol,
+h5 + p, h5 + ul, h5 + ol,
+h6 + p, h6 + ul, h6 + ol {
+  margin-top: var(--spacing-xs);
+}
+
+/* Spacing between paragraphs */
+p + p {
+  margin-top: var(--spacing-sm);
+}
+
+/* Spacing between headings */
+h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,
+h2 + h3, h2 + h4, h2 + h5, h2 + h6,
+h3 + h4, h3 + h5, h3 + h6,
+h4 + h5, h4 + h6,
+h5 + h6 {
+  margin-top: var(--spacing-sm);
+}
+
+/* Spacing between sections */
+section + section {
+  margin-top: var(--spacing-lg);
+}
+
+/* Tighter list spacing */
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: var(--spacing-xs);
+}
+
+/* Tighter blockquote spacing */
+blockquote {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--primary-300);
+}
+
+/* Flow spacing utility classes */
+.flow > * + * {
+  margin-top: var(--spacing-sm);
+}
+
+.flow-tight > * + * {
+  margin-top: var(--spacing-xs);
+}
+
+.flow-loose > * + * {
+  margin-top: var(--spacing-md);
+}
+
+/* Specific spacing overrides for hero elements */
+.hero-text h1 {
+  margin: 0;
+}
+
+.hero-text p {
+  margin: 0;
+}
+
+.hero-text .hero-actions {
+  margin-top: var(--spacing-sm);
+}
+
+/* Utility classes for manual spacing control */
+.mt-tight { margin-top: var(--spacing-xs); }
+.mb-tight { margin-bottom: var(--spacing-xs); }
+.my-tight { margin-top: var(--spacing-xs); margin-bottom: var(--spacing-xs); }
+
+.mt-normal { margin-top: var(--spacing-sm); }
+.mb-normal { margin-bottom: var(--spacing-sm); }
+.my-normal { margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
+
+.mt-loose { margin-top: var(--spacing-md); }
+.mb-loose { margin-bottom: var(--spacing-md); }
+.my-loose { margin-top: var(--spacing-md); margin-bottom: var(--spacing-md); }

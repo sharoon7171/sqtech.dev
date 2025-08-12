@@ -1,0 +1,239 @@
+/* Layout System - Containers & Wrappers */
+
+/* Ultra Responsive Container - Works at ANY width */
+.container {
+  width: var(--container-lg);
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 4vw, 2rem);
+}
+
+/* Modern Container Sizes */
+.container-xs {
+  width: var(--container-xs);
+}
+
+.container-sm {
+  width: var(--container-sm);
+}
+
+.container-md {
+  width: var(--container-md);
+}
+
+.container-lg {
+  width: var(--container-lg);
+}
+
+.container-xl {
+  width: var(--container-xl);
+}
+
+.container-2xl {
+  width: var(--container-2xl);
+}
+
+.container-full {
+  width: var(--container-full);
+  max-width: none;
+}
+
+.container-fluid {
+  width: min(98vw, 100%);
+  max-width: none;
+  padding: 0 clamp(0.25rem, 5vw, 3rem);
+}
+
+/* Modern responsive padding handled by clamp() - no media queries needed */
+
+/* Ultra Responsive Sections - Works at ANY width */
+.section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.section-sm {
+  padding: var(--spacing-lg) 0;
+}
+
+.section-lg {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section-xl {
+  padding: var(--spacing-4xl) 0;
+}
+
+.section-hero {
+  padding: clamp(1rem, 15vh, 8rem) 0 clamp(0.5rem, 10vh, 6rem);
+  min-height: var(--vh-small);
+  display: flex;
+  align-items: center;
+}
+
+/* Ultra Responsive Content Wrappers */
+.content-wrapper {
+  width: min(65ch, 95vw);
+  margin: 0 auto;
+}
+
+.content-narrow {
+  width: min(45ch, 90vw);
+  margin: 0 auto;
+}
+
+.content-wide {
+  width: min(75ch, 95vw);
+  margin: 0 auto;
+}
+
+.content-full {
+  width: min(85ch, 98vw);
+  margin: 0 auto;
+}
+
+/* Card Containers */
+.card-container {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--neutral-200);
+  background: var(--neutral-50);
+}
+
+.card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--neutral-200);
+  background: var(--neutral-50);
+}
+
+/* Media Object */
+.media {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.media-object {
+  flex-shrink: 0;
+}
+
+.media-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Stack Layouts */
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack > * + * {
+  margin-top: 1rem;
+}
+
+.stack-sm > * + * {
+  margin-top: 0.5rem;
+}
+
+.stack-lg > * + * {
+  margin-top: 1.5rem;
+}
+
+.stack-xl > * + * {
+  margin-top: 2rem;
+}
+
+/* Cluster Layouts */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cluster-start {
+  justify-content: flex-start;
+}
+
+.cluster-center {
+  justify-content: center;
+}
+
+.cluster-end {
+  justify-content: flex-end;
+}
+
+.cluster-between {
+  justify-content: space-between;
+}
+
+.cluster-around {
+  justify-content: space-around;
+}
+
+/* Sidebar Layouts */
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sidebar > :first-child {
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+.sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}
+
+/* Switcher Layout */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999);
+}
+
+/* Cover Layout */
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.cover > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cover > :first-child:not(.cover-centered) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(.cover-centered) {
+  margin-bottom: 0;
+}
+
+.cover-centered {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Modern responsive design handled by clamp() and viewport units - no media queries needed */

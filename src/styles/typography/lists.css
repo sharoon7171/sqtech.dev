@@ -1,0 +1,243 @@
+/* Typography System - Lists */
+
+/* Base List Styles */
+.list-base {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+/* Unordered Lists */
+.list-unordered {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+.list-unordered li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.list-unordered li::before {
+  content: '•';
+  color: var(--primary-600);
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+  top: 0;
+}
+
+/* List Variants */
+.list-bullet {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.list-bullet li {
+  margin-bottom: 0.5rem;
+  color: var(--neutral-700);
+}
+
+.list-bullet li::marker {
+  color: var(--primary-600);
+}
+
+/* Custom Bullet Lists */
+.list-check {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+.list-check li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: var(--neutral-700);
+}
+
+.list-check li::before {
+  content: '✓';
+  color: var(--success-600);
+  font-weight: bold;
+  position: absolute;
+  left: -1.25rem;
+  top: 0;
+}
+
+.list-arrow {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+.list-arrow li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.list-arrow li::before {
+  content: '→';
+  color: var(--primary-600);
+  font-weight: bold;
+  position: absolute;
+  left: -1.25rem;
+  top: 0;
+}
+
+.list-star {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+.list-star li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.list-star li::before {
+  content: '★';
+  color: var(--accent-600);
+  position: absolute;
+  left: -1.25rem;
+  top: 0;
+}
+
+/* Ordered Lists */
+.list-ordered {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.list-ordered li {
+  margin-bottom: 0.5rem;
+  color: var(--neutral-700);
+}
+
+.list-ordered li::marker {
+  color: var(--primary-600);
+  font-weight: 600;
+}
+
+.list-roman {
+  list-style-type: lower-roman;
+  padding-left: 1.5rem;
+}
+
+.list-alpha {
+  list-style-type: lower-alpha;
+  padding-left: 1.5rem;
+}
+
+/* Definition Lists */
+.list-definition dt {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: 0.25rem;
+}
+
+.list-definition dd {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-700);
+}
+
+/* Navigation Lists */
+.list-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-nav li {
+  margin-bottom: 0.25rem;
+}
+
+.list-nav-horizontal {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-nav-horizontal li {
+  margin-bottom: 0;
+}
+
+/* Feature Lists */
+.list-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--neutral-50);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--primary-600);
+}
+
+.list-features li i {
+  color: var(--primary-600);
+  font-size: 1.25rem;
+  margin-top: 0.125rem;
+}
+
+/* Compact Lists */
+.list-compact li {
+  margin-bottom: 0.25rem;
+}
+
+.list-spaced li {
+  margin-bottom: 1rem;
+}
+
+/* List Sizes */
+.list-sm {
+  font-size: var(--font-size-sm);
+}
+
+.list-sm li {
+  margin-bottom: 0.375rem;
+}
+
+.list-lg {
+  font-size: var(--font-size-lg);
+}
+
+.list-lg li {
+  margin-bottom: 0.75rem;
+}
+
+/* Nested Lists */
+.list-unordered .list-unordered,
+.list-ordered .list-ordered {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list-unordered .list-unordered li::before {
+  content: '◦';
+}
+
+/* List Colors */
+.list-primary li::before,
+.list-primary li::marker {
+  color: var(--primary-600);
+}
+
+.list-secondary li::before,
+.list-secondary li::marker {
+  color: var(--secondary-600);
+}
+
+.list-muted {
+  color: var(--neutral-600);
+}
+
+.list-muted li::before,
+.list-muted li::marker {
+  color: var(--neutral-500);
+}
