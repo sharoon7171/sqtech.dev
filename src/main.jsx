@@ -10,6 +10,10 @@ import './styles/components/links.css'
 import './styles/components/HeroSection.css'
 import './styles/components/StatsSection.css'
 import './styles/components/StatCard.css'
+import './styles/components/TechnicalSection.css'
+import './styles/components/TechCard.css'
+import './styles/components/SkillBar.css'
+import './styles/components/Footer.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
